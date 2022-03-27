@@ -13,7 +13,7 @@ podTemplate(yaml: '''
 ''') {
       node(POD_LABEL) {
             stage('k8s') {
-              git 'https://github.com/mp125uml/week8.git'
+              git 'https://github.com/mp125uml/week9.git'
               container('centos') {
                 stage('deploy calculator') {
                     sh '''

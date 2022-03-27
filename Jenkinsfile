@@ -23,8 +23,13 @@ podTemplate(yaml: '''
                     ./kubectl apply -f hazelcast.yaml -n devops-tools
                     '''
                 }
+                stage('test calculator') {
+                    sh '''
+                    curl 'calculator-service:8080/sum?a=1&b=2'
+                    curl 'calculator-service:8080/div?a=1&b=0'
+                    '''
+                }
               }
             }
-
       }
     }

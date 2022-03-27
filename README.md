@@ -1,4 +1,1 @@
-# week9
-Hello
-Build on pull request
-Please build
+All but the pull

@@ -25,9 +25,8 @@ podTemplate(yaml: '''
                 }
                 stage('test calculator') {
                     sh '''
-                    sleep 120
-                    curl 'calculator-service:8080/sum?a=1&b=2'
-                    curl 'calculator-service:8080/div?a=6&b=3'
+                    curl 'calculator-service.staging.svc.cluster.local:8080/sum?a=1&b=2'
+                    curl 'calculator-service.staging.svc.cluster.local:8080/div?a=6&b=3'
                     '''
                 }
               }
